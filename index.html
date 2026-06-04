@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAVASTAN - Demo</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#222733;
+    color:white;
+}
+
+.container{
+    width:90%;
+    max-width:600px;
+    margin:auto;
+    text-align:center;
+    padding-top:40px;
+}
+
+.warning{
+    background:red;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    padding:25px;
+    margin-bottom:40px;
+}
+
+.logo{
+    font-size:52px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:30px;
+}
+
+.login-title{
+    font-size:42px;
+    margin-bottom:30px;
+    font-weight:300;
+}
+
+input{
+    width:100%;
+    padding:18px;
+    margin-bottom:15px;
+    font-size:18px;
+    border:none;
+    border-radius:3px;
+}
+
+.captcha-box{
+    background:white;
+    color:red;
+    font-size:50px;
+    font-weight:bold;
+    letter-spacing:15px;
+    padding:20px;
+    margin:15px 0;
+}
+
+.btn{
+    width:100%;
+    padding:18px;
+    border:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.login-btn{
+    background:#5d8fdb;
+    color:white;
+    margin-top:10px;
+}
+
+.register-btn{
+    margin-top:25px;
+    background:transparent;
+    border:2px solid #c75a5a;
+    color:#c75a5a;
+}
+
+.error{
+    display:none;
+    color:#ff5b5b;
+    margin-top:15px;
+    font-size:18px;
+}
+
+.ssl{
+    margin-top:40px;
+    color:#ddd;
+    font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="warning">
+WARNING: OUR DOMAIN HAS CHANGED.<br>
+PLEASE BOOKMARK THE NEW ONE.
+</div>
+
+<div class="logo">SAVASTAN</div>
+
+<div class="login-title">LOGIN</div>
+
+<input type="text" placeholder="Enter Username">
+<input type="password" placeholder="Enter Password">
+
+<div style="margin-bottom:10px;text-align:left;">
+Forgot password?
+</div>
+
+<div>Please type the text EXACTLY as in the image.</div>
+
+<div class="captcha-box">
+S E U 2 D S
+</div>
+
+<input type="text" placeholder="Enter CAPTCHA">
+
+<button class="btn login-btn" onclick="showError()">
+LOGIN
+</button>
+
+<div class="error" id="error">
+ERROR: Invalid Username or Password
+</div>
+
+<button class="btn register-btn">
+REGISTER NOW!
+</button>
+
+<div class="ssl">
+🔒 128-bit SSL encryption
+</div>
+
+</div>
+
+<script>
+function showError(){
+    document.getElementById("error").style.display="block";
+}
+</script>
+
+</body>
+</html>
